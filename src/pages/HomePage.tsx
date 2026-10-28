@@ -32,8 +32,7 @@ interface SignatureDishItem {
 const SignatureDishCard: React.FC<{
   dish: SignatureDishItem;
   whatsappNumber: string;
-  spanFullOnDesktop?: boolean;
-}> = ({ dish, whatsappNumber, spanFullOnDesktop = false }) => {
+}> = ({ dish, whatsappNumber }) => {
   const [imgError, setImgError] = useState(false);
   const isVeg = dish.type === 'V';
   const showPhoto = Boolean(dish.image) && !imgError;
@@ -43,73 +42,66 @@ const SignatureDishCard: React.FC<{
   );
 
   return (
-    <article
-      className={`bg-white border border-[#E5DDD2] rounded-xl p-4 shadow-xs grid grid-rows-[1fr_auto] gap-4 min-w-0 ${
-        spanFullOnDesktop ? 'sm:col-span-2' : ''
-      }`}
-    >
-      {/* Top Row: Image on Left (or plain neutral card if no photo), Name + Short Description + Price on Right */}
-      <div
-        className={`grid gap-3.5 items-start min-w-0 ${
-          showPhoto ? 'grid-cols-[80px_1fr] sm:grid-cols-[88px_1fr]' : 'grid-cols-1'
-        }`}
-      >
-        {showPhoto && (
-          <div className="w-full aspect-square rounded-lg overflow-hidden bg-[#F3ECE1] border border-[#E5DDD2]">
-            <img
-              src={dish.image}
-              alt={dish.imageAlt || dish.name}
-              width={88}
-              height={88}
-              loading="lazy"
-              onError={() => setImgError(true)}
-              className="w-full h-full object-cover block"
-            />
+    <article className="box-border w-full h-[216px] sm:h-[196px] p-4 bg-white border border-[#E5DDD2] rounded-xl shadow-xs grid grid-cols-[88px_minmax(0,1fr)] grid-rows-[minmax(0,1fr)_44px] gap-x-4 gap-y-3.5 items-start min-w-0">
+      {/* Grid Cell (Row 1, Col 1): Image on the Left */}
+      <div className="w-[88px] h-[88px] rounded-lg overflow-hidden bg-[#F3ECE1] border border-[#E5DDD2] shrink-0">
+        {showPhoto ? (
+          <img
+            src={dish.image}
+            alt={dish.imageAlt || dish.name}
+            width={88}
+            height={88}
+            loading="lazy"
+            onError={() => setImgError(true)}
+            className="w-full h-full object-cover block"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-[#7A6F67] text-[12px] font-medium select-none">
+            Bawarchi
           </div>
         )}
-
-        <div className="min-w-0 flex flex-col">
-          {/* Header Row: Dietary Marker + Dish Name on Left, Price on Right */}
-          <div className="grid grid-cols-[1fr_auto] items-start gap-2 min-w-0">
-            <div className="grid grid-cols-[14px_1fr] items-start gap-2 min-w-0">
-              <span className="pt-[5px]">
-                {isVeg ? (
-                  <span className="veg-badge" title="Vegetarian" aria-label="Vegetarian">
-                    <span className="veg-dot" />
-                  </span>
-                ) : (
-                  <span
-                    className="non-veg-badge"
-                    title="Non-Vegetarian"
-                    aria-label="Non-Vegetarian"
-                  >
-                    <span className="non-veg-dot" />
-                  </span>
-                )}
-              </span>
-              <h3 className="font-heritage font-semibold text-[18px] text-[#1F1A17] leading-snug break-words min-w-0">
-                {dish.name}
-              </h3>
-            </div>
-
-            <span className="tabular-price font-bold text-[18px] text-[#6E1D1B] leading-snug shrink-0">
-              ₹{dish.price}
-            </span>
-          </div>
-
-          {/* Short Plain Description (<= 12 words) */}
-          <p className="text-[15px] leading-[1.5] text-[#5C534E] mt-1.5 min-w-0">
-            {dish.description}
-          </p>
-        </div>
       </div>
 
-      {/* Bottom Row: Full-Width Button Pinned to Bottom of Card */}
+      {/* Grid Cell (Row 1, Col 2): Details (Name, Description, Price) on the Right */}
+      <div className="min-w-0 h-full flex flex-col justify-start">
+        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-2 min-w-0">
+          <div className="grid grid-cols-[14px_minmax(0,1fr)] items-start gap-1.5 min-w-0">
+            <span className="pt-[4px]">
+              {isVeg ? (
+                <span className="veg-badge" title="Vegetarian" aria-label="Vegetarian">
+                  <span className="veg-dot" />
+                </span>
+              ) : (
+                <span
+                  className="non-veg-badge"
+                  title="Non-Vegetarian"
+                  aria-label="Non-Vegetarian"
+                >
+                  <span className="non-veg-dot" />
+                </span>
+              )}
+            </span>
+            <h3 className="font-heritage font-semibold text-[17px] text-[#1F1A17] leading-[1.25] break-words min-w-0">
+              {dish.name}
+            </h3>
+          </div>
+
+          <span className="tabular-price font-bold text-[17px] text-[#6E1D1B] leading-[1.25] shrink-0">
+            ₹{dish.price}
+          </span>
+        </div>
+
+        <p className="text-[14px] leading-[1.45] text-[#5C534E] mt-1.5 min-w-0">
+          {dish.description}
+        </p>
+      </div>
+
+      {/* Grid Cell (Row 2, Col 1-2): Single Full-Width Button Row Pinned to Bottom */}
       <a
         href={dishWhatsAppHref}
         rel="noopener noreferrer"
         target="_blank"
-        className="w-full h-11 px-4 rounded-lg bg-[#FAF6F0] hover:bg-[#6E1D1B] text-[#1F1A17] hover:text-white border border-[#E5DDD2] hover:border-[#6E1D1B] font-semibold text-[14px] inline-flex items-center justify-center gap-2 transition-subtle min-w-0"
+        className="col-span-2 box-border w-full h-11 px-4 rounded-lg bg-[#FAF6F0] hover:bg-[#6E1D1B] text-[#1F1A17] hover:text-white border border-[#E5DDD2] hover:border-[#6E1D1B] font-semibold text-[14px] inline-flex items-center justify-center gap-2 transition-subtle min-w-0 self-end"
       >
         <MessageCircle className="w-4 h-4 shrink-0" aria-hidden="true" />
         <span className="truncate">Order on WhatsApp</span>
@@ -218,19 +210,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {signatureDishes.map((dish, idx) => {
-            const isLastOddCard =
-              signatureDishes.length % 2 === 1 && idx === signatureDishes.length - 1;
-            return (
-              <SignatureDishCard
-                key={dish.id}
-                dish={dish}
-                whatsappNumber={restaurant.whatsappNumber}
-                spanFullOnDesktop={isLastOddCard}
-              />
-            );
-          })}
+        <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-[216px] sm:auto-rows-[196px] gap-4">
+          {signatureDishes.map((dish) => (
+            <SignatureDishCard
+              key={dish.id}
+              dish={dish}
+              whatsappNumber={restaurant.whatsappNumber}
+            />
+          ))}
         </div>
       </section>
 
