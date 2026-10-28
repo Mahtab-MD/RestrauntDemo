@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   DESIGN TOKENS — Restrained Agency Palette & 2-Font System
+   Spacing Scale: 4 / 8 / 12 / 16 / 24 / 32 / 48px
+   ========================================================================== */
+:root {
+  /* Restrained Palette: Deep Oxblood/Maroon, Warm Cream, Charcoal, Gold Accent */
+  --color-oxblood: #6E1D1B;
+  --color-oxblood-hover: #571614;
+  --color-cream: #FAF6F0;
+  --color-cream-subtle: #F3ECE1;
+  --color-surface: #FFFFFF;
+  --color-charcoal: #1F1A17;
+  --color-text-muted: #5C534E;
+  --color-gold: #C6922C;
+  --color-gold-soft: #FBF5E8;
+  --color-border: #E5DDD2;
+
+  /* Dietary & Functional Colors */
+  --color-veg: #1E6B3A;
+  --color-non-veg: #B42318;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #20BD5A;
+  --color-whatsapp-text: #0D2815;
+
+  /* Legacy alias variables for seamless utility mapping */
+  --color-clay: var(--color-oxblood);
+  --color-clay-dark: var(--color-oxblood-hover);
+  --color-turmeric: var(--color-gold);
+  --color-turmeric-light: var(--color-gold-soft);
+  --color-leaf-green: var(--color-veg);
+  --color-leaf-light: #EAF5EE;
+  --color-dark-charcoal: var(--color-charcoal);
+  --color-warm-paper: var(--color-cream);
+  --color-subtle-border: var(--color-border);
+
+  /* Strictly 2 Fonts: Vollkorn (Serif) & Plus Jakarta Sans (Clean Sans) */
+  --font-heading: 'Vollkorn', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@theme {
+  --color-clay: var(--color-oxblood);
+  --color-clayDark: var(--color-oxblood-hover);
+  --color-turmeric: var(--color-gold);
+  --color-turmericLight: var(--color-gold-soft);
+  --color-leafGreen: var(--color-veg);
+  --color-leafLight: #EAF5EE;
+  --color-darkCharcoal: var(--color-charcoal);
+  --color-warmPaper: var(--color-cream);
+  --color-subtleBorder: var(--color-border);
+
+  --font-heading: var(--font-heading);
+  --font-sans: var(--font-sans);
+}
+
+/* ==========================================================================
+   BASE, BOX-SIZING & TYPOGRAPHIC SCALE
+   Heading: 24-28px | Subheading: 18px | Body: 15-16px (1.5 lh) | Caption: 13px
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem; /* 15px minimum body text */
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  body {
+    font-size: 1rem; /* 16px on larger screens */
+  }
+}
+
+/* Consistent Page Container: 16-20px horizontal padding, max-w 1040px */
+.site-container {
+  width: 100%;
+  max-width: 64rem; /* 1024px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.font-heritage {
+  font-family: var(--font-heading);
+}
+
+.tabular-price {
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   DIETARY MARKERS — Unified 14px Square with Centered Dot (Veg Green / Non-Veg Red)
+   ========================================================================== */
+.veg-badge,
+.non-veg-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.veg-badge {
+  border: 1.5px solid var(--color-veg);
+}
+
+.veg-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--color-veg);
+}
+
+.non-veg-badge {
+  border: 1.5px solid var(--color-non-veg);
+}
+
+.non-veg-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--color-non-veg);
+}
+
+/* ==========================================================================
+   SCROLLBARS, FADE MASK & SAFE-AREA PADDING
+   ========================================================================== */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Right-edge fade for horizontal category tab strip */
+.category-scroll-fade {
+  position: relative;
+}
+
+.category-scroll-fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(250, 246, 240, 0), var(--color-cream) 90%);
+}
+
+/* Mobile sticky bottom bar safe-area support */
+.pb-safe-bottom-bar {
+  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .pb-safe-bottom-bar {
+    padding-bottom: 0;
+  }
+}
+
+.bottom-bar-safe {
+  padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+}
+
+/* Subtle 150-200ms transitions & reduced motion support */
+.transition-subtle {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: 160ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-oxblood);
+  outline-offset: 2px;
+}

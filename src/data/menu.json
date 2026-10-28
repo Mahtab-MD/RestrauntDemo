@@ -1,0 +1,408 @@
+{
+  "restaurant": {
+    "name": "Bawarchi",
+    "legalName": "Bawarchi Foods",
+    "proprietor": "Mr. A. Rahman",
+    "tagline": "Hyderabadi dum biryani and North Indian classics",
+    "cuisine": ["Hyderabadi", "Mughlai", "North Indian"],
+    "customers": ["students", "families", "faculty", "late-night orders"],
+    "established": 2019,
+    "priceRange": "₹100 to ₹350 per person",
+    "priceRangeShort": "₹100 – ₹350",
+    "fssaiLicense": "12345678901234",
+    "phoneDisplay": "+91 98765 43210",
+    "phoneTel": "+919876543210",
+    "whatsappNumber": "919876543210",
+    "whatsappDefaultText": "Hi Bawarchi, I'd like to order: ",
+    "email": "hello@bawarchidemo.in",
+    "instagramUrl": "https://instagram.com/bawarchi.demo",
+    "instagramHandle": "@bawarchi.demo",
+    "address": {
+      "full": "No. 24, Pillayar Koil Street, Potheri, Kattankulathur, Tamil Nadu 603203",
+      "landmark": "near the Potheri railway gate",
+      "short": "Potheri, Kattankulathur",
+      "street": "No. 24, Pillayar Koil Street, Potheri",
+      "city": "Kattankulathur",
+      "state": "Tamil Nadu",
+      "pincode": "603203",
+      "mapsSearchUrl": "https://www.google.com/maps/search/?api=1&query=No.+24,+Pillayar+Koil+Street,+Potheri,+Kattankulathur,+Tamil+Nadu+603203",
+      "mapsEmbedUrl": "https://www.google.com/maps?q=Pillayar+Koil+Street+Potheri+Kattankulathur+Tamil+Nadu+603203&output=embed"
+    },
+    "hours": {
+      "summary": "Monday to Sunday, 11:00 AM to 11:30 PM (Fridays open from 12:30 PM)",
+      "shortStrip": "11:00 AM – 11:30 PM · Fri from 12:30 PM",
+      "timezone": "Asia/Kolkata",
+      "regular": {
+        "open": "11:00",
+        "close": "23:30"
+      },
+      "friday": {
+        "open": "12:30",
+        "close": "23:30"
+      },
+      "sessions": [
+        {
+          "label": "Monday – Thursday, Saturday & Sunday",
+          "time": "11:00 AM – 11:30 PM",
+          "stackBelow": false,
+          "highlight": true
+        },
+        {
+          "label": "Friday (Post-Jummah Opening)",
+          "time": "12:30 PM – 11:30 PM",
+          "stackBelow": false,
+          "highlight": false
+        },
+        {
+          "label": "Fresh Dum Handi Batches",
+          "time": "12:00 PM, 3:00 PM, 7:30 PM & 9:30 PM",
+          "stackBelow": true,
+          "highlight": false
+        },
+        {
+          "label": "Late-Night Counter Parcels",
+          "time": "Until 11:30 PM Daily",
+          "stackBelow": false,
+          "highlight": true
+        }
+      ]
+    },
+    "seatingAndParking": {
+      "seating": "80 seats across our ground-floor counter and air-conditioned family dining room.",
+      "parking": "Two-wheeler parking in front on Pillayar Koil Street; car parking 80m away near the railway gate.",
+      "directions": [
+        {
+          "title": "Landmark",
+          "detail": "Near the Potheri railway gate, 3 minutes walk from Potheri station."
+        },
+        {
+          "title": "Campus Access",
+          "detail": "5 minutes from SRM main arch for students, faculty, and families."
+        },
+        {
+          "title": "Parking & Seating",
+          "detail": "Two-wheeler bays out front; ground-floor counter and AC family dining room."
+        }
+      ]
+    },
+    "allergenNotice": "Please tell us about any allergies before ordering. Our kitchen handles nuts, dairy, gluten, and other common allergens.",
+    "demoBanner": "Demo website. Sample information, not a real business.",
+    "credit": {
+      "name": "Bawarchi Digital Studio",
+      "url": "https://example.com"
+    }
+  },
+  "signatureDishes": [
+    {
+      "id": "sig-chicken-dum-biryani",
+      "name": "Chicken Dum Biryani",
+      "type": "NV",
+      "price": 180,
+      "badge": "Signature",
+      "image": "/images/biryani.jpg",
+      "imageAlt": "Chicken Dum Biryani served with mirchi ka salan and raita",
+      "description": "Basmati rice and spiced chicken slow-cooked on dum with salan and raita."
+    },
+    {
+      "id": "sig-mutton-biryani",
+      "name": "Mutton Biryani",
+      "type": "NV",
+      "price": 260,
+      "badge": "Signature",
+      "image": "/images/mutton-biryani.jpg",
+      "imageAlt": "Hyderabadi Mutton Biryani cooked in a copper handi",
+      "description": "Tender goat meat layered with saffron basmati rice, mint, and whole spices."
+    },
+    {
+      "id": "sig-chicken-65",
+      "name": "Chicken 65",
+      "type": "NV",
+      "price": 150,
+      "badge": "Signature",
+      "image": "/images/chicken65.jpg",
+      "imageAlt": "Crisp fried Chicken 65 tempered with curry leaves and green chillies",
+      "description": "Boneless fried chicken tossed with yogurt, red chillies, garlic, and curry leaves."
+    },
+    {
+      "id": "sig-butter-chicken",
+      "name": "Butter Chicken",
+      "type": "NV",
+      "price": 190,
+      "badge": "Signature",
+      "image": "/images/butter-chicken.jpg",
+      "imageAlt": "North Indian Butter Chicken in tomato and butter gravy",
+      "description": "Tandoori chicken pieces simmered in a rich tomato, cashew, and butter gravy."
+    },
+    {
+      "id": "sig-paneer-butter-masala",
+      "name": "Paneer Butter Masala",
+      "type": "V",
+      "price": 160,
+      "badge": "Signature",
+      "image": "/images/paneer-butter-masala.jpg",
+      "imageAlt": "Vegetarian Paneer Butter Masala curry",
+      "description": "Soft cottage cheese cubes cooked in a mildly spiced tomato-cream gravy."
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-biryani",
+      "name": "Biryani",
+      "shortLabel": "Biryani",
+      "subtitle": "Cooked on coal-fired copper handis. Served with Mirchi ka Salan and raita.",
+      "timingBadge": "11:00 AM – 11:30 PM",
+      "items": [
+        {
+          "id": "chicken-dum-biryani",
+          "name": "Chicken Dum Biryani",
+          "type": "NV",
+          "price": 180,
+          "badge": "Signature",
+          "description": "Spiced chicken and aged basmati rice cooked on slow coal dum."
+        },
+        {
+          "id": "mutton-biryani",
+          "name": "Mutton Biryani",
+          "type": "NV",
+          "price": 260,
+          "badge": "Signature",
+          "description": "Bone-in goat meat slow-cooked with saffron basmati rice and whole spices."
+        },
+        {
+          "id": "egg-biryani",
+          "name": "Egg Biryani",
+          "type": "NV",
+          "price": 130,
+          "description": "Two spiced boiled eggs served over fragrant Hyderabadi dum biryani rice."
+        },
+        {
+          "id": "veg-biryani",
+          "name": "Veg Biryani",
+          "type": "V",
+          "price": 120,
+          "description": "Seasonal vegetables, mint, and basmati rice cooked in a separate handi."
+        },
+        {
+          "id": "paneer-biryani",
+          "name": "Paneer Biryani",
+          "type": "V",
+          "price": 150,
+          "description": "Marinated paneer cubes layered with saffron basmati rice and fried onions."
+        },
+        {
+          "id": "family-pack-chicken-biryani",
+          "name": "Family Pack Chicken Biryani (serves 3)",
+          "type": "NV",
+          "price": 520,
+          "description": "Three-person chicken biryani pack with extra pieces, boiled eggs, salan, and raita."
+        }
+      ]
+    },
+    {
+      "id": "cat-starters",
+      "name": "Starters",
+      "shortLabel": "Starters",
+      "subtitle": "Fried and tawa-tossed to order with curry leaves, lemon, and onions.",
+      "timingBadge": "All Day",
+      "items": [
+        {
+          "id": "chicken-65",
+          "name": "Chicken 65",
+          "type": "NV",
+          "price": 150,
+          "badge": "Signature",
+          "description": "Crisp boneless chicken tempered with red chillies, garlic, and curry leaves."
+        },
+        {
+          "id": "chicken-lollipop",
+          "name": "Chicken Lollipop",
+          "type": "NV",
+          "price": 170,
+          "description": "Spiced chicken wingettes fried crisp and served with garlic chilli sauce."
+        },
+        {
+          "id": "apollo-fish",
+          "name": "Apollo Fish",
+          "type": "NV",
+          "price": 190,
+          "description": "Boneless fish fillets tossed in a tangy Hyderabadi yogurt-chilli masala."
+        },
+        {
+          "id": "gobi-65",
+          "name": "Gobi 65",
+          "type": "V",
+          "price": 110,
+          "description": "Crisp cauliflower florets fried with roasted cumin, chilli, and curry leaves."
+        },
+        {
+          "id": "paneer-tikka",
+          "name": "Paneer Tikka",
+          "type": "V",
+          "price": 150,
+          "description": "Char-grilled paneer cubes, peppers, and onions marinated in spiced yogurt."
+        }
+      ]
+    },
+    {
+      "id": "cat-curries",
+      "name": "Curries",
+      "shortLabel": "Curries",
+      "subtitle": "North Indian, Mughlai, and regional gravies cooked fresh daily.",
+      "timingBadge": "Lunch & Dinner",
+      "items": [
+        {
+          "id": "butter-chicken",
+          "name": "Butter Chicken",
+          "type": "NV",
+          "price": 190,
+          "badge": "Signature",
+          "description": "Tandoori chicken simmered in a smooth tomato, butter, and cashew gravy."
+        },
+        {
+          "id": "chicken-chettinad",
+          "name": "Chicken Chettinad",
+          "type": "NV",
+          "price": 180,
+          "description": "Chicken cooked with roasted black pepper, curry leaves, and coconut masala."
+        },
+        {
+          "id": "mutton-rogan-josh",
+          "name": "Mutton Rogan Josh",
+          "type": "NV",
+          "price": 260,
+          "description": "Slow-braised goat meat in an aromatic Kashmiri chilli and fennel gravy."
+        },
+        {
+          "id": "paneer-butter-masala",
+          "name": "Paneer Butter Masala",
+          "type": "V",
+          "price": 160,
+          "badge": "Signature",
+          "description": "Cottage cheese cubes simmered in a rich tomato, cream, and butter gravy."
+        },
+        {
+          "id": "dal-tadka",
+          "name": "Dal Tadka",
+          "type": "V",
+          "price": 110,
+          "description": "Yellow lentils tempered with ghee, roasted cumin, garlic, and red chillies."
+        }
+      ]
+    },
+    {
+      "id": "cat-breads-rice",
+      "name": "Breads and rice",
+      "shortLabel": "Breads & Rice",
+      "subtitle": "Baked to order in our clay tandoor or cooked fresh on the tawa.",
+      "timingBadge": "Fresh to Order",
+      "items": [
+        {
+          "id": "butter-naan",
+          "name": "Butter Naan",
+          "type": "V",
+          "price": 35,
+          "description": "Soft clay-oven flatbread brushed with melted butter."
+        },
+        {
+          "id": "tandoori-roti",
+          "name": "Tandoori Roti",
+          "type": "V",
+          "price": 20,
+          "description": "Crisp whole-wheat flatbread baked in our charcoal tandoor."
+        },
+        {
+          "id": "malabar-parotta",
+          "name": "Malabar Parotta",
+          "type": "V",
+          "price": 25,
+          "description": "Flaky, layered tawa flatbread griddled warm and crisp."
+        },
+        {
+          "id": "jeera-rice",
+          "name": "Jeera Rice",
+          "type": "V",
+          "price": 90,
+          "description": "Basmati rice tempered with ghee, cumin seeds, and fresh coriander."
+        },
+        {
+          "id": "plain-rice",
+          "name": "Plain Rice",
+          "type": "V",
+          "price": 60,
+          "description": "Steamed white rice, ideal alongside curries and dal."
+        }
+      ]
+    },
+    {
+      "id": "cat-desserts-drinks",
+      "name": "Desserts and drinks",
+      "shortLabel": "Desserts & Drinks",
+      "subtitle": "Traditional Hyderabadi sweets and chilled house beverages.",
+      "timingBadge": "All Day",
+      "items": [
+        {
+          "id": "double-ka-meetha",
+          "name": "Double Ka Meetha",
+          "type": "V",
+          "price": 70,
+          "badge": "Signature",
+          "description": "Fried bread soaked in saffron-cardamom milk and topped with nuts."
+        },
+        {
+          "id": "gulab-jamun",
+          "name": "Gulab Jamun",
+          "type": "V",
+          "price": 50,
+          "description": "Warm milk dumplings steeped in cardamom and rose sugar syrup."
+        },
+        {
+          "id": "fresh-lime-soda",
+          "name": "Fresh Lime Soda",
+          "type": "V",
+          "price": 40,
+          "description": "Freshly squeezed lime juice and club soda — sweet, salted, or mixed."
+        },
+        {
+          "id": "mint-mojito",
+          "name": "Mint Mojito",
+          "type": "V",
+          "price": 70,
+          "description": "Crushed mint leaves, fresh lime wedges, and chilled sparkling soda."
+        },
+        {
+          "id": "masala-buttermilk",
+          "name": "Masala Buttermilk",
+          "type": "V",
+          "price": 30,
+          "description": "Chilled churned yogurt seasoned with roasted cumin, ginger, and coriander."
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "label": "Sample review",
+      "name": "Karthik",
+      "context": "Late-night order",
+      "rating": 5,
+      "comment": "The Chicken Dum Biryani at ₹180 has great coal-dum flavor and generous portions. Quick counter pickup near the Potheri railway gate."
+    },
+    {
+      "id": "rev-2",
+      "label": "Sample review",
+      "name": "Ananya",
+      "context": "Family dinner parcel",
+      "rating": 5,
+      "comment": "Ordered Paneer Butter Masala, Butter Naan, and Double Ka Meetha on WhatsApp. Neat packing and fresh, balanced spices."
+    },
+    {
+      "id": "rev-3",
+      "label": "Sample review",
+      "name": "Farhan",
+      "context": "Weekend lunch",
+      "rating": 5,
+      "comment": "Mutton Biryani and Chicken 65 are consistently good. Ordering directly on WhatsApp avoids delivery app markups."
+    }
+  ]
+}

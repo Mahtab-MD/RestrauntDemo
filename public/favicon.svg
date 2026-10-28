@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bawarchi Dum Handi Emblem">
+  <rect width="64" height="64" rx="14" fill="#1E1815" />
+  <circle cx="32" cy="32" r="27" fill="#FAF5EE" stroke="#E09F3E" stroke-width="2.5" />
+  <!-- Handi Lid & Steam -->
+  <path d="M26 17c0-2 2-3 2-5M32 16c0-2 2-3 2-5M38 17c0-2 2-3 2-5" stroke="#A93A24" stroke-width="2" stroke-linecap="round" fill="none" />
+  <path d="M20 26h24l-3-5H23l-3 5z" fill="#E09F3E" stroke="#1E1815" stroke-width="1.5" />
+  <!-- Clay Dum Handi Pot -->
+  <path d="M17 27h30c1 10-4 20-15 20S16 37 17 27z" fill="#A93A24" stroke="#1E1815" stroke-width="1.5" />
+  <text x="32" y="41" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="13" fill="#FAF5EE">B</text>
+</svg>

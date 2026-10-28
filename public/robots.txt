@@ -1,0 +1,6 @@
+# DEMO ONLY: Disallow search engine indexing while this site contains sample data.
+# TODO: Before launching for a real client, change "Disallow: /" to "Allow: /"
+User-agent: *
+Disallow: /
+
+Sitemap: https://bawarchidemo.in/sitemap.xml

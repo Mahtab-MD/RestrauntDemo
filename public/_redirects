@@ -1,0 +1,3 @@
+# Netlify / Cloudflare Pages routing configuration
+/home              /                  301
+/*                 /index.html        200

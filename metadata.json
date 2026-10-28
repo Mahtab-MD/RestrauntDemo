@@ -1,0 +1,6 @@
+{
+  "name": "Bawarchi — Hyderabadi Dum Biryani & North Indian Classics (Demo)",
+  "description": "Demo website for Bawarchi in Potheri, Kattankulathur. Authentic Hyderabadi dum biryani, Mughlai curries, and North Indian classics with direct WhatsApp and phone ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
